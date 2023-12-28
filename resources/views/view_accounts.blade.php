@@ -44,7 +44,7 @@
                             <a href="{{ route('account.edit', ['id' => $account->account_id]) }}" class="btn btn-primary">
                                 Edit
                             </a>
-                            <a href="{{ route('account.delete', ['id' => $account->account_id]) }}" class="btn btn-danger">
+                            <a href="{{ route('account.delete', ['account' => $account->account_id]) }}" class="btn btn-danger">
                                 Delete
                             </a>
                         </td>

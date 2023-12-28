@@ -37,8 +37,7 @@ class AccountController extends Controller
         return view('view_accounts')->with($data);
     }
 
-    public function delete($id){
-        $account = Account::find($id);
+    public function delete(Account $account){
         if(!is_null($account)){
             $account->delete();
         }

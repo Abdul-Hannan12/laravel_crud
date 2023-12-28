@@ -28,7 +28,7 @@ Route::get('/register', [AuthController::class, 'signup']);
 
 Route::post('/account/add', [AccountController::class, 'store']);
 
-Route::get('/account/delete/{id}', [AccountController::class, 'delete'])->name('account.delete');
+Route::get('/account/delete/{account}', [AccountController::class, 'delete'])->name('account.delete');
 
 Route::post('/account/update/{id}', [AccountController::class, 'update']);
 

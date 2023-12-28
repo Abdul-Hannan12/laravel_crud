@@ -43,4 +43,3 @@ Route::group(['prefix' => '/account'], function (){
     Route::get('/edit/{id}', [AccountController::class, 'edit'])->name('account.edit');
 
 });
-
