@@ -34,8 +34,13 @@ Route::get('/accounts', function(){
 
 // MY CRUD ROUTES
 
-Route::get('/account/add', [AccountController::class, 'add'])->name('account.add');
+Route::group(['prefix' => '/account'], function (){
 
-Route::get('/account/view', [AccountController::class, 'view'])->name('account.view');
+    Route::get('/add', [AccountController::class, 'add'])->name('account.add');
+    
+    Route::get('/view', [AccountController::class, 'view'])->name('account.view');
+    
+    Route::get('/edit/{id}', [AccountController::class, 'edit'])->name('account.edit');
 
-Route::get('/account/edit/{id}', [AccountController::class, 'edit'])->name('account.edit');
+});
+
